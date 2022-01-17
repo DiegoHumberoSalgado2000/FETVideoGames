@@ -1,0 +1,22 @@
+<h1>FORTNITE<small>(25 de julio de 2017)</small>
+</h1>
+<hr>
+
+<div class="row animated fadeIn fast">
+  <div class="col-md-4">
+    <img [src]="videojuego.img" class="img-fluid" [alt]="videojuego.nombre">
+    <br>
+    <br>
+    <a [routerLink]="['/videojuegos']" class="btn btn-outline-danger btn-block d-grid gap-2">Regresar</a>
+  </div>
+  <div class="col-md-8">
+    <h3>{{videojuego.nombre}}</h3>
+    <hr>
+    <p>
+      {{videojuego.descripcion}}
+    </p>
+    <img *ngIf="videojuego.consola=='PS4'" class="logo" src="assets/img/logo/logo_ps4.png" alt="">
+    <img *ngIf="videojuego.consola=='Xbox'" class="logo" src="assets/img/logo/logo_xbox.png" alt="">
+  </div>
+
+</div>
